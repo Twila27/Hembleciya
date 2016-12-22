@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<BiomeBlueprint name="The Arena of Neverending Hallways" size="64,32"> 
+	<!-- Pulls the name from the * of *.Biome.xml if none supplied in <BiomeBlueprint> to overwrite it. Note size is irrelevant to FromData. -->
+	<!-- generator= and steps= correspond to member variables of the base [Environment/Biome]GenerationProcess class. -->
+	<!-- Any other extra pairs need to be parsed into member fields of Generator SUBclass instances' lightweight corresponding GenerationProcess SUBclasses. -->
+	<GenerationProcessData generator="FromDataGenerator" steps="1" file="Data/XML/SecondMap.map.xml"/>
+	<!-- Whatever's first overrides whatever's after it! -->
+</BiomeBlueprint>

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="General">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="General\Code">
+      <UniqueIdentifier>{af03d1ee-e5f5-4077-a9b8-55daeda9ff4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Code\Generators">
+      <UniqueIdentifier>{2f33a8cc-6aa5-41f0-9b5b-3ae7cb3e9c62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Data">
+      <UniqueIdentifier>{e9c966f3-ec35-468a-80a3-203906bea7b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Data\Biomes">
+      <UniqueIdentifier>{022d9b7b-4734-4094-a4b4-2af016b6022d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Code\Biomes">
+      <UniqueIdentifier>{2c4c58cb-c94b-4ec3-ab20-e5751511d583}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Data\Maps">
+      <UniqueIdentifier>{333feb21-592f-4591-963f-fab81f61b4e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Code\FieldOfView">
+      <UniqueIdentifier>{e8a8f282-09ec-4264-9c78-00a14700d453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Code\Pathfinding">
+      <UniqueIdentifier>{cb60acf2-444c-403c-85c3-d3d5cde7f765}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Code\NPCs">
+      <UniqueIdentifier>{e7720371-bfd3-4930-83c1-14e39ff99cd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Code\Behaviors">
+      <UniqueIdentifier>{bffba16d-67c4-4536-841a-c5654640e90d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Code\Items">
+      <UniqueIdentifier>{56428059-3b5d-4ebd-a4b0-7eaa715d23d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Code\Features">
+      <UniqueIdentifier>{0818df4c-f4b7-49e5-a776-e72bee3d7528}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Generators\Generator.cpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="Generators\CellularAutomataGenerator.cpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="Generators\FromDataGenerator.cpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCommon.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_Win32.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="TheApp.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="TheGame.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Biomes\BiomeBlueprint.cpp">
+      <Filter>General\Code\Biomes</Filter>
+    </ClCompile>
+    <ClCompile Include="Biomes\BiomeGenerationProcess.cpp">
+      <Filter>General\Code\Biomes</Filter>
+    </ClCompile>
+    <ClCompile Include="Biomes\FromDataGenerationProcess.cpp">
+      <Filter>General\Code\Biomes</Filter>
+    </ClCompile>
+    <ClCompile Include="Generators\KruskalDartboardGenerator.cpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="Generators\PrimHarwardGenerator.cpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEntity.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Agent.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldOfView\FieldOfView.cpp">
+      <Filter>General\Code\FieldOfView</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldOfView\FieldOfViewBasic.cpp">
+      <Filter>General\Code\FieldOfView</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldOfView\FieldOfViewRaycast.cpp">
+      <Filter>General\Code\FieldOfView</Filter>
+    </ClCompile>
+    <ClCompile Include="Pathfinding\Pathfinder.cpp">
+      <Filter>General\Code\Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Pathfinding\PathNode.cpp">
+      <Filter>General\Code\Pathfinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviors\Behavior.cpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCs\NPCFactory.cpp">
+      <Filter>General\Code\NPCs</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCs\NPC.cpp">
+      <Filter>General\Code\NPCs</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviors\WanderBehavior.cpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviors\ChaseBehavior.cpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviors\MeleeBehavior.cpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatSystem.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="FactionSystem.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviors\DreamBehavior.cpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviors\AmalgamateBehavior.cpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClCompile>
+    <ClCompile Include="Items\ItemFactory.cpp">
+      <Filter>General\Code\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Items\Item.cpp">
+      <Filter>General\Code\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\FeatureFactory.cpp">
+      <Filter>General\Code\Features</Filter>
+    </ClCompile>
+    <ClCompile Include="Features\Feature.cpp">
+      <Filter>General\Code\Features</Filter>
+    </ClCompile>
+    <ClCompile Include="Generators\CastleGenerator.cpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="TheGameRenderer.cpp">
+      <Filter>General\Code</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Generators\Generator.hpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="Generators\CellularAutomataGenerator.hpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="Generators\FromDataGenerator.hpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="Cell.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCommon.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="TheApp.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="TheGame.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Biomes\BiomeBlueprint.hpp">
+      <Filter>General\Code\Biomes</Filter>
+    </ClInclude>
+    <ClInclude Include="Biomes\BiomeGenerationProcess.hpp">
+      <Filter>General\Code\Biomes</Filter>
+    </ClInclude>
+    <ClInclude Include="Biomes\FromDataGenerationProcess.hpp">
+      <Filter>General\Code\Biomes</Filter>
+    </ClInclude>
+    <ClInclude Include="Generators\KruskalDartboardGenerator.hpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="Generators\PrimHarwardGenerator.hpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEntity.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Agent.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldOfView\FieldOfView.hpp">
+      <Filter>General\Code\FieldOfView</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldOfView\FieldOfViewBasic.hpp">
+      <Filter>General\Code\FieldOfView</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldOfView\FieldOfViewRaycast.hpp">
+      <Filter>General\Code\FieldOfView</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Pathfinder.hpp">
+      <Filter>General\Code\Pathfinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\PathNode.hpp">
+      <Filter>General\Code\Pathfinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviors\Behavior.hpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCs\NPCFactory.hpp">
+      <Filter>General\Code\NPCs</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCs\NPC.hpp">
+      <Filter>General\Code\NPCs</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviors\WanderBehavior.hpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviors\ChaseBehavior.hpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviors\MeleeBehavior.hpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="CombatSystem.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="FactionSystem.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviors\DreamBehavior.hpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviors\AmalgamateBehavior.hpp">
+      <Filter>General\Code\Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="Items\ItemFactory.hpp">
+      <Filter>General\Code\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Items\Item.hpp">
+      <Filter>General\Code\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.hpp">
+      <Filter>General\Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\FeatureFactory.hpp">
+      <Filter>General\Code\Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Features\Feature.hpp">
+      <Filter>General\Code\Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Generators\CastleGenerator.hpp">
+      <Filter>General\Code\Generators</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\Run_Win32\Data\Biomes\Caves.Biome.xml">
+      <Filter>General\Data\Biomes</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\XML\FirstMap.Map.xml">
+      <Filter>General\Data\Maps</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\XML\Biomes\Caves.Biome.xml">
+      <Filter>General\Data\Biomes</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\XML\Biomes\Dungeon.Biome.xml">
+      <Filter>General\Data\Biomes</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\XML\Biomes\FromDataTest.Biome.xml">
+      <Filter>General\Data\Biomes</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\XML\Biomes\GameOfLifeCaves.Biome.xml">
+      <Filter>General\Data\Biomes</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\XML\Biomes\HarwardCaves.Biome.xml">
+      <Filter>General\Data\Biomes</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\XML\Biomes\Metropolis.Biome.xml">
+      <Filter>General\Data\Biomes</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\XML\Biomes\MetropolisHub.Biome.xml">
+      <Filter>General\Data\Biomes</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\XML\Biomes\Sandbar.Biome.xml">
+      <Filter>General\Data\Biomes</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\XML\SecondMap.Map.xml">
+      <Filter>General\Data\Maps</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

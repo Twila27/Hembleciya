@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<NPCBlueprints>
+	<NPCBlueprint name="Dreams of Flying" maxHealth="10" glyph="f" color="200,191,231" faction="Daydream" traversalProperties="5" >
+		<Behaviors>
+			<Amalgamate maxDistAwayToAmalgamate="1.5" maxHealthFractionNeededToActivate="0.5" /> include diagonals
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="2" chanceToRun="0.5" />
+			<Dream name="On Top of the World" maxHealthFractionNeededToActivate="1.0" color="255,255,255" >
+			#################################################
+			#...............................................#
+			#.............................,zeSSe,...........#
+			#...........,edSSSeee,,......,SSSSSSSP,,........#
+			#........zSSSSSSSSSSSSSSSSSeeSSSSSS,............#
+			#.....,dSSSSSSSSSSSSSSSSSSSSSSSSS,..............#
+			#...,SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSe,,..........#
+			#.,SS****,,,,***SSSSSSSSSSSSSSSSSSSSSSSSSSSbe,..#
+			#..................,,**SSSSSSSSSSSSSSSSSSSSSSSL.#
+			#....................zSSSSSSSSSSSSSSSSSSSSSSSSS.#
+			#..................,SSSSSSSSP**SSSSSSSSSSSSSSSS.#
+			#.................dSSSSSSS,..............4SSSSS.#
+			#...............zSSSSSSSSS................SSSP,.#
+			#..............dSSSSSSSSSF................SP,...#
+			#..............SSSSSSSSSSF......................#
+			#...............*SSSSSSSS,......................#
+			#.................,***,,..Gilo94,...............#
+			#...............................................#
+			#################################################
+			</Dream>
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="Nightmares of Falling" maxHealth="17" glyph="f" color="163,73,164" faction="Phobias" traversalProperties="5" >
+		<Behaviors>
+			<Amalgamate maxDistAwayToAmalgamate="1.5" maxHealthFractionNeededToActivate="0.5" /> include diagonals
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<Chase maxTilesAwayToStartChasing="15" maxTurnsToChase="30" chanceToRun=".9" />
+			<MeleeAttack baseDamage="3" chanceToRun="0.5" />
+			<Dream name="Hypnic Jerk" maxHealthFractionNeededToActivate="1.0" color="155,0,155" >
+			#################################
+			#.|.....|...._....._....|.....|.#
+			#..\.../..##..\.../..##..\.../..#
+			#...\./...##...\./...##...\./...#
+			#....|....##....|....##....|....#
+			#..\.|./..##....|....##..\.|./..#
+			#...\|/...##.../|\...##...\|/...#
+			#....O......../.O.\........O....#
+			#...............................#
+			#################################
+			</Dream>
+		</Behaviors>
+	</NPCBlueprint>
+
+	<NPCBlueprint name="A Wandering Daydream" faction="Daydream" maxHealth="10" glyph="d" color="255,255,127"  >
+		<Behaviors>
+			<Amalgamate maxDistAwayToAmalgamate="1.5" maxHealthFractionNeededToActivate="0.5" /> include diagonals
+			<Wander chanceToRest=".5" chanceToGoStraight=".3" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="2" chanceToRun="0.5" />
+			<Dream name="My First Dream" maxHealthFractionNeededToActivate="1.0" color="255,0,255" >
+			#######
+			#.....#
+			#.,,,.#
+			#.,.,.#
+			#.,,,.#
+			#.....#
+			#######
+			</Dream>
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Chasing Nightmare" faction="Nightmare" maxHealth="30" glyph="C" color="172,0,0"  >
+		<Behaviors>
+			<Amalgamate maxDistAwayToAmalgamate="1.5" maxHealthFractionNeededToActivate=".25" /> include diagonals
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<Chase maxTilesAwayToStartChasing="15" maxTurnsToChase="30" chanceToRun=".9" ignoreUnarmed="1" />
+			<MeleeAttack baseDamage="3" chanceToRun=".9" />
+			<Dream name="My First Nightmare" maxHealthFractionNeededToActivate="1.0" color="136,0,21" >
+			##########
+			#!ESCAPE!#
+			#!ESCAPE!#
+			#!ESCAPE!#
+			#/!\../!\#
+			#/!\../!\#
+			#/!\../!\#
+			#!ESCAPE!#
+			#!ESCAPE!#
+			#!ESCAPE!#
+			#!ESCAPE!#
+			##########
+			</Dream>
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A False Awakening" maxHealth="25" glyph="Q" color="0,255,255" faction="Shadowself"  > because it kinda looks like the player glyph @
+		<Behaviors>
+			<Amalgamate maxDistAwayToAmalgamate="1.5" maxHealthFractionNeededToActivate=".25" /> include diagonals
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="1.0" />
+			<Dream name="My Identity" maxHealthFractionNeededToActivate="1.0" color="255,128,192" >
+			########
+			#@@@@@@#
+			#I@AM@U#
+			#U@AM@I#
+			#@@@@@@#
+			########
+			</Dream>
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="An Imprisoning Nightmare of Drowning" maxHealth="20" glyph="~" color="0,127,255" traversalProperties="13" >
+		<Faction name="Phobias" loves="Nightmare"/>
+		<Behaviors>
+			<Amalgamate maxDistAwayToAmalgamate="1.5" maxHealthFractionNeededToActivate=".25" /> include diagonals
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="3" chanceToRun="0.75" />
+			<Dream name="Sleep With the Fishies" maxHealthFractionNeededToActivate="1.0" color="0,127,127" >
+			########
+			#G~~~~B#
+			#L~~~~U#
+			#U~~~~L#
+			#B~~~~G#
+			########
+			</Dream>
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Dream Underwater" maxHealth="15" faction="Daydream" glyph="~" color="0,64,255" traversalProperties="13" >
+		<Behaviors>
+			<Amalgamate maxDistAwayToAmalgamate="1.5" maxHealthFractionNeededToActivate="0.5" /> include diagonals
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="2" chanceToRun="0.75" />
+			<Dream name="Kiddie Pool" maxHealthFractionNeededToActivate="1.0" color="0,127,127" >
+			########
+			#g~~~~b#
+			#l~~~~u#
+			#u~~~~l#
+			#b~~~~g#
+			########
+			</Dream>
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="Dreams of Your Teeth Falling Out" faction="Nightmare" maxHealth="15" glyph="T" color="255,255,255"  >
+		<Behaviors>
+			<Amalgamate maxDistAwayToAmalgamate="1.5" maxHealthFractionNeededToActivate=".25" /> include diagonals
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+			<Dream name="Open Wide" maxHealthFractionNeededToActivate="1.0" color="192,192,192" >
+			########
+			#\/\/\/#
+			#......#
+			#......#
+			#/\/\/\#
+			########
+			</Dream>
+		</Behaviors>
+	</NPCBlueprint>
+	
+</NPCBlueprints>
+
+note below will not get parsed!
+
+<NPCBlueprints>
+	
+	<NPCBlueprint name="A Lucid Dream" maxHealth="1" glyph="L" color="0,255,255"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="2" chanceToRun="1.0" />
+			need to add lucid behavior here, invert color if mimicing player 1:-1 instead of 1:1
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Recurring Dream" maxHealth="1" glyph="r" color="255,0,255"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="1.0" />
+			add behavior to repeat the last attack from the last Dream enemy dealt to the player, use base if 1st
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Recurring Nightmare" maxHealth="1" glyph="R" color="127,0,127"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="2" chanceToRun="1.0" />
+			add behavior to repeat the last attack from the last Nightmare enemy dealt to the player, use base if 1st
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Dream of Wellness" maxHealth="1" glyph="h" color="255,174,200"  > heal?
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Vision" maxHealth="1" glyph="I" color="240,200,86"  > these are the things you're hunting after
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Signal" maxHealth="1" glyph="s" color="172,172,172"  > vision buff?
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Life-Changing Dream" maxHealth="1" glyph="Q" color="240,200,86"  > todo: future goal? like a Vision... maybe can go onto maps more or less heavenly/hellish?
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Dream of Progression" maxHealth="1" glyph="Q" color="0,255,255"  >  todo: gives you one of a set of items which when gathered achieve something for you
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Shared Dream" maxHealth="1" glyph="Q" color="0,255,255"  > todo: frees a follower dreamer (Chase w/o Melee) if its dream gets defeated, not an oneirogen
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	End Categories, Begin Normals
+	
+	<NPCBlueprint name="Underwear Nightmares" maxHealth="1" glyph="N" color="0,255,255"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="Dreams of Losing Your Teeth" maxHealth="1" glyph="T" color="0,255,255"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="A Dream of a Baby" maxHealth="1" glyph="b" color="0,255,255"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<Chase maxTilesAwayToStartChasing="15" maxTurnsToChase="30" chanceToRun="1.0" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="Nightmares of Car Crashes" maxHealth="1" glyph="c" color="0,255,255"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="Nightmares of Surprise Exams" maxHealth="1" glyph="S" color="0,255,255"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="Nightmares of Dying" maxHealth="1" glyph="D" color="0,255,255"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="An Immobilizing Dream" maxHealth="1" glyph="D" color="0,255,255"  > behavior to stop player movement for a turn?
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="Dreams of Home" maxHealth="1" glyph="f" color="0,255,255"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	<NPCBlueprint name="Dreams of Intimacy" maxHealth="1" glyph="f" color="0,255,255"  >
+		<Behaviors>
+			<Wander chanceToRest=".1" chanceToGoStraight=".5" chanceToRun="1.0" />
+			<MeleeAttack baseDamage="1" chanceToRun="0.5" />
+		</Behaviors>
+	</NPCBlueprint>
+	
+	
+	
+</NPCBlueprints>
+
+need to add a rarity attribute (default to 1.0 in constructor) on NPCFactory! make it higher for specials like Drowning that have unique factions!
+get a SetFontScale on theConsole, use it to shrink faction status updates.
+if possible re-enable scrolling the log with pgup/down
+
+--> make the entities drawn with drop shadows but not the map so the water dream enemies ~ will pop out on sandbar map

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<EnvironmentBlueprint backgroundTexture="OldParchmentBackground">
+	<Generation generator="River"			surface="lava" iterations="1"/>
+	<Generation generator="River"			surface="lava" iterations="1"/>
+	<Generation generator="Room"			optional="prison" quantity="2"/>
+	<Generation generator="SimpleDungeon"	rangeMins="0.0,0.0" rangeMaxs="1.0,1.0" iterations="15" roomPercentage="0.85"/>
+	<Generation generator="SimpleDungeon"	rangeMins="0.0,0.0" rangeMaxs="0.6,1.0" iterations="10" roomPercentage="0.85"/>
+</EnvironmentBlueprint>

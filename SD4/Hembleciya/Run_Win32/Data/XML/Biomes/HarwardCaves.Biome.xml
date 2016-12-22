@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<BiomeBlueprint name="Cavernous Dreams of a Cellular Automaton" size="64,32"> <!-- Pulls the name from the * of *.Biome.xml if none supplied here to overwrite it. -->
+	<!-- generator= and steps= correspond to member variables of the base [Environment/Biome]GenerationProcess class. -->
+	<!-- Any other extra pairs need to be parsed into member fields of Generator SUBclass instances' lightweight corresponding GenerationProcess SUBclasses. -->
+	<GenerationProcessData generator="HarwardCaverns" steps="25" />
+</BiomeBlueprint>

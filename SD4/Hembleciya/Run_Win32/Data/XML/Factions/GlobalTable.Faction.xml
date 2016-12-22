@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<Factions>
+	<Faction name="Nightmare" likes="" dislikes="Daydream" hates="Player"/>
+	<Faction name="Daydream" loves="" likes="" dislikes="Daydream" hates=""/>
+	<Faction name="Lucid" loves="" likes="" dislikes="Daydream" hates=""/>
+	<Faction name="Recurring" loves="" likes="" dislikes="Daydream" hates=""/>
+	<Faction name="Foresight" loves="" likes="" dislikes="Daydream" hates=""/>
+	<Faction name="Revelatory" loves="" likes="" dislikes="Daydream" hates=""/>
+	<Faction name="Mundane" loves="" likes="" dislikes="Daydream" hates=""/>
+	<Faction name="Shadowself" loves="" likes="" dislikes="Daydream" hates=""/>
+	<Faction name="Sequential" loves="" likes="" dislikes="Daydream" hates=""/>
+	<Faction name="Mundane" loves="" likes="" dislikes="Daydream" hates=""/>
+	<Faction name="Shared" loves="" likes="" dislikes="Daydream" hates=""/>
+</Factions>
