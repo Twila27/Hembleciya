@@ -124,11 +124,11 @@ UtilityValue DreamBehavior::CalcUtility()
 	if ( m_dreamMap->IsSolidAtPosition( playerDreamMapPos ) )
 		return NO_UTILITY_VALUE; //Don't spawn player in on a wall.
 
-					//By this point we know we have the player in range and can bring the dream map around them without getting them stuck.
-					//	if ( m_agent->GetHealth() > ( m_agent->GetMaxHealth() * m_maxHealthFractionNeededToActivate ) )
-					//		return 0.f; //Agent still too healthy. Letting it take damage first makes it slightly likelier the player's in close.
+	//By this point we know we have the player in range and can bring the dream map around them without getting them stuck.
+	//	if ( m_agent->GetHealth() > ( m_agent->GetMaxHealth() * m_maxHealthFractionNeededToActivate ) )
+	//		return 0.f; //Agent still too healthy. Letting it take damage first makes it slightly likelier the player's in close.
 
-					//First, at least for now--if we're starting a swap--test to be sure a dream doesn't already exist there.
+	//First, at least for now--if we're starting a swap--test to be sure a dream doesn't already exist there.
 	
 	//-----------------------------------------------------------------------------
 	//Check for other dreams already happening around the NPC.
