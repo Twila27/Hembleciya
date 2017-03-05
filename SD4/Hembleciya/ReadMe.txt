@@ -4,8 +4,7 @@ Name: Benjamin D. Gibson
 Details/Videos: http://bdgibson.com/hembleciya
 
 //-----------------------------------------------------------------------------
-Build Notes		
-  1. The EXE will crash if these folders do not exist under the Run folder: 
+Build Notes: The EXE will crash if these folders do not exist under the Run folder: 
     Data/
       Audio/
       Fonts/
