@@ -1,0 +1,2 @@
+This file acts as a placeholder in Perforce to keep the folder in existence.
+This way the XML parsing library can still find this directory, which Perforce would otherwise not copy down because it would be blank.

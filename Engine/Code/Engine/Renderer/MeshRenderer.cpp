@@ -46,7 +46,7 @@ STATIC MeshRenderer* MeshRenderer::OverwriteMeshRenderer( const std::string& ove
 //--------------------------------------------------------------------------------------------------------------
 STATIC MeshRenderer* MeshRenderer::CreateAndAddFboEffectRenderer( std::shared_ptr<Mesh> mesh, Material* material )
 {
-	TODO( "Just have all such MeshRenderers take a class constant Mesh* fboQuad kept in TheRenderer or built here." );
+	ROADMAP( "Just have all such MeshRenderers take a class constant Mesh* fboQuad kept in TheRenderer or built here." );
 
 	MeshRenderer* fboRenderer = new MeshRenderer( mesh, material );
 
@@ -137,7 +137,7 @@ void MeshRenderer::SetMaterial( Material* material, bool overwriteMemberMaterial
 	{
 		const VertexAttribute* attr = vertexDefinition->GetAttributeAtIndex( attributeIndex );
 
-		TODO( "Add a function to return correct sizes for different Vertex types, but how to tell which Vertexes' type a definition corresponds to?" );
+		ROADMAP( "Add a function to return correct sizes for different Vertex types, but how to tell which Vertexes' type a definition corresponds to?" );
 		if ( !material->BindInputAttribute( attr->m_attributeName.c_str(), attr->m_count, attr->m_fieldType,
 										   attr->m_normalized, vertexDefinition->GetVertexSize(), attr->m_offset ) )
 		{
@@ -172,7 +172,7 @@ void MeshRenderer::Render()
 void MeshRenderer::ResetVAO( Mesh* mesh, Material* material )
 {
 	UNREFERENCED( mesh );
-	TODO( "Cleanup reset code upon FBXLoad in Tools/FBXUtils here!" );
+	ROADMAP( "Cleanup reset code upon FBXLoad in Tools/FBXUtils here!" );
 
 	glDeleteVertexArrays( 1, &m_vaoID );
 
@@ -210,7 +210,7 @@ void MeshRenderer::Render( Mesh* mesh, Material* material )
 	{
 		const DrawInstruction& currentInstruction = drawInstructions[ instructionIndex ];
 
-		TODO( "Synthesize functionality with TheRenderer enum!" );
+		ROADMAP( "Synthesize functionality with TheRenderer enum!" );
 		unsigned int vertexGroupingRule = 0;
 		switch ( currentInstruction.m_type )
 		{

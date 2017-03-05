@@ -17,9 +17,6 @@ class VertexDefinition;
 class MeshRenderer
 {
 public:
-	TODO( "Make private! Was keeping visible for SD4 use." );
-	MeshRenderer( std::shared_ptr<Mesh> mesh, Material* material );
-	
 	static MeshRenderer* CreateOrGetMeshRenderer( const std::string& meshRendererName, std::shared_ptr<Mesh> mesh, Material* material );
 	static MeshRenderer* OverwriteMeshRenderer( const std::string& overwrittenMeshRendererName, std::shared_ptr<Mesh> mesh, Material* material );
 	static MeshRenderer* CreateAndAddFboEffectRenderer( std::shared_ptr<Mesh> mesh, Material* material );
@@ -53,6 +50,8 @@ public:
 
 
 private:
+	MeshRenderer( std::shared_ptr<Mesh> mesh, Material* material );
+
 	void ResetVAO( Mesh* mesh, Material* material );
 	static std::map< std::string, MeshRenderer* > s_meshRendererRegistry;
 	static std::vector< MeshRenderer* > s_fboQuadRendererRegistry;

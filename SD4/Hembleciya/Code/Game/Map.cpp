@@ -103,9 +103,6 @@ bool Map::DoesPositionSatisfyTraversalProperties( const MapPosition& position, b
 
 	Cell& queriedCell = GetCellForPosition( position );
 
-	TODO( "Create a for-loop structure << 1 each iteration, and a GetCellTypeForMovementProperty() to plug in for macro's 2nd arg below." );
-	//And then just check by-agents outside the loop.
-
 	if ( GET_BIT_WITHOUT_INDEX_MASKED( traversalProperties, TraversalProperties::BLOCKED_BY_SOLIDS ) != 0 )
 		if ( IsTypeSolid( queriedCell.m_cellType ) )
 			return false;
@@ -141,9 +138,6 @@ bool Map::IsSlowedAtPosition( const MapPosition& position, bitfield_int traversa
 		return true;
 
 	Cell& queriedCell = GetCellForPosition( position );
-
-	TODO( "Create a for-loop structure << 1 each iteration, and a GetCellTypeForMovementProperty() to plug in for macro's 2nd arg below." );
-	//And then just check by-agents outside the loop.
 
 	if ( GET_BIT_WITHOUT_INDEX_MASKED( traversalProperties, TraversalProperties::SLOWED_BY_LAVA ) != 0 )
 		if ( queriedCell.m_cellType == CELL_TYPE_LAVA )
@@ -246,14 +240,14 @@ void Map::RefreshCellOccupantVisibility()
 //--------------------------------------------------------------------------------------------------------------
 void Map::HideOccludedCells()
 {
-	//See whether any tile has non - solid neighbors.If any neighbor has a non - solid neighbor, it could be seen by someone.
-	// 		Might be a good chance to use TileDefinition for it...
-	// 		But if none of my neighbors are non - solid, or all of my neighbors are solid, that tile will never be "seen".
+	//See whether any tile has non-solid neighbors. If any neighbor has a non-solid neighbor, it could be seen by someone.
+	//If none of my neighbors are non-solid, or all of my neighbors are solid, that tile will never be "seen".
 	
 	for ( unsigned int cellIndex = 0; cellIndex < m_cells.size(); cellIndex++ )
 	{
-		//if you're solid first here?
-		if ( GetNumNeighborsAroundCellOfType( GetPositionForIndex( cellIndex ), CELL_TYPE_STONE_WALL, 1.f, true ) == 8 )
+		const MapPosition& mapPos = GetPositionForIndex( cellIndex );
+		constexpr bool INCLUDE_DIAGONALS = true;
+		if ( GetNumNeighborsAroundCellOfType( mapPos, CELL_TYPE_STONE_WALL, 1.f, INCLUDE_DIAGONALS ) == 8 )
 			m_cells[ cellIndex ].m_isHidden = true;
 	}
 }
@@ -444,10 +438,14 @@ MapDirection Map::IsCellAdjacentToType( const Vector2i& centerCellPos, CellType 
 		int bottomLeftCellIndex = GetIndexForPosition( centerCellPos - Vector2i::UNIT_X - Vector2i::UNIT_Y );
 		int bottomRightCellIndex = GetIndexForPosition( centerCellPos + Vector2i::UNIT_X - Vector2i::UNIT_Y );
 
-		if ( DoesCellMatchType( topLeftCellIndex, queriedType ) ) return DIRECTION_UP_LEFT;
-		if ( DoesCellMatchType( topRightCellIndex, queriedType ) ) return DIRECTION_UP_RIGHT;
-		if ( DoesCellMatchType( bottomLeftCellIndex, queriedType ) ) return DIRECTION_DOWN_LEFT;
-		if ( DoesCellMatchType( bottomRightCellIndex, queriedType ) ) return DIRECTION_DOWN_RIGHT;
+		if ( DoesCellMatchType( topLeftCellIndex, queriedType ) ) 
+			return DIRECTION_UP_LEFT;
+		if ( DoesCellMatchType( topRightCellIndex, queriedType ) ) 
+			return DIRECTION_UP_RIGHT;
+		if ( DoesCellMatchType( bottomLeftCellIndex, queriedType ) ) 
+			return DIRECTION_DOWN_LEFT;
+		if ( DoesCellMatchType( bottomRightCellIndex, queriedType ) ) 
+			return DIRECTION_DOWN_RIGHT;
 	}
 
 	int topCellIndex = GetIndexForPosition( centerCellPos + Vector2i::UNIT_Y );
@@ -455,10 +453,14 @@ MapDirection Map::IsCellAdjacentToType( const Vector2i& centerCellPos, CellType 
 	int rightCellIndex = GetIndexForPosition( centerCellPos + Vector2i::UNIT_X );
 	int bottomCellIndex = GetIndexForPosition( centerCellPos - Vector2i::UNIT_Y );
 
-	if ( DoesCellMatchType( topCellIndex, queriedType ) ) return DIRECTION_UP;
-	if ( DoesCellMatchType( leftCellIndex, queriedType ) ) return DIRECTION_LEFT;
-	if ( DoesCellMatchType( rightCellIndex, queriedType ) ) return DIRECTION_RIGHT;
-	if ( DoesCellMatchType( bottomCellIndex, queriedType ) ) return DIRECTION_DOWN;
+	if ( DoesCellMatchType( topCellIndex, queriedType ) ) 
+		return DIRECTION_UP;
+	if ( DoesCellMatchType( leftCellIndex, queriedType ) ) 
+		return DIRECTION_LEFT;
+	if ( DoesCellMatchType( rightCellIndex, queriedType ) ) 
+		return DIRECTION_RIGHT;
+	if ( DoesCellMatchType( bottomCellIndex, queriedType ) ) 
+		return DIRECTION_DOWN;
 
 	return DIRECTION_NONE;
 }
@@ -484,7 +486,8 @@ bool Map::IsTraversableAtPosition( const MapPosition& position ) const
 	if ( !IsPositionOnMap( position ) )
 		return false;
 
-	const Cell& queriedCell = m_cells[ GetIndexForPosition( position ) ];
+	int mapCellIndex = GetIndexForPosition( position );
+	const Cell& queriedCell = m_cells[ mapCellIndex ];
 	return !queriedCell.DoesBlockMovement();
 }
 
@@ -495,7 +498,8 @@ bool Map::IsSolidAtPosition( const MapPosition& position ) const
 	if ( !IsPositionOnMap( position ) )
 		return false;
 
-	const Cell& queriedCell = m_cells[ GetIndexForPosition( position ) ]; 
+	int mapCellIndex = GetIndexForPosition( position );
+	const Cell& queriedCell = m_cells[ mapCellIndex ];
 	return queriedCell.DoesBlockMovement();
 }
 
@@ -524,7 +528,8 @@ bool Map::DoesBlockLineOfSightAtPosition( const MapPosition& position ) const
 	if ( !IsPositionOnMap( position ) )
 		return false;
 
-	const Cell& queriedCell = m_cells[ GetIndexForPosition( position ) ];
+	int mapCellIndex = GetIndexForPosition( position );
+	const Cell& queriedCell = m_cells[ mapCellIndex ];
 	return queriedCell.DoesBlockLineOfSight();
 }
 
@@ -565,7 +570,7 @@ void Map::CopyCellsFromMap( Map* sourceMap )
 //--------------------------------------------------------------------------------------------------------------
 inline bool Map::DoesCellMatchType( unsigned int cellIndex, CellType type )
 {
-	if ( cellIndex < 0 || cellIndex >( m_cells.size() - 1 ) )
+	if ( ( cellIndex < 0 ) || ( cellIndex > ( m_cells.size() - 1 ) ) )
 		return ( type == CELL_TYPE_STONE_WALL ); //Assumes cells off-map are solid.
 
 	return ( m_cells[ cellIndex ].m_cellType == type );

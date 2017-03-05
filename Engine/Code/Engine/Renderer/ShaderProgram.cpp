@@ -210,7 +210,7 @@ ShaderProgram::~ShaderProgram()
 
 
 //--------------------------------------------------------------------------------------------------------------
-TODO( "Revise attribute and uniform caching to Forseth's comments." );
+ROADMAP( "Revise attribute and uniform caching to Forseth's comments." );
 //Called by Material::BindInputAttribute which is called by MeshRenderer::SetMaterial.
 unsigned int ShaderProgram::BindInputAttribute( const std::string& attributeName, unsigned int count, VertexFieldType fieldType, bool normalize, int strideInBytes, int offsetInBytes )
 {
@@ -245,7 +245,7 @@ unsigned int ShaderProgram::BindInputAttribute( const std::string& attributeName
 
 
 //--------------------------------------------------------------------------------------------------------------
-TODO( "Revise attribute and uniform caching to Forseth's comments." );
+ROADMAP( "Revise attribute and uniform caching to Forseth's comments." );
 //Called by Material::BindInputAttribute which is called by MeshRenderer::SetMaterial.
 void ShaderProgram::AddInputAttribute( const std::string& attributeNameVerbatim, unsigned int attributeLocation, ShaderVariableType glslType )
 {
@@ -332,7 +332,7 @@ bool ShaderProgram::SetMatrix4x4( const std::string& uniformNameVerbatim, bool s
 	GLint loc = glGetUniformLocation( m_shaderProgramID, uniformNameVerbatim.c_str() );
 	if ( loc >= 0 )
 	{
-		TODO( "Replace &val by _offsetof(Matrix4x4, m_data) to foolproof against shifting bug." );
+		ROADMAP( "Replace &val by _offsetof(Matrix4x4, m_data) to foolproof against shifting bug." );
 		//BE VERY CAREFUL THAT THE DATA IS THE FIRST ELEMENT OF THE CLASS, ELSE BELOW CODE IS SHIFTED BY OTHER MEMBERS OF MATRIX CLASS.
 		glUniformMatrix4fv( loc, arraySize, (GLboolean)shouldTranspose, (GLfloat*)matrixValues.data() ); //shouldTranspose: must be true if using row-major MVP && left-multiplying vert*MVP in shader!.
 		//NOTE: OpenGL ES and WebGL seem to potentially not allow true here, in which case just invert any val param with val->m_ordering == ROW_MAJOR.

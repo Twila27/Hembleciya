@@ -119,7 +119,7 @@ std::vector< std::string > SplitString( const char* fullString, char delimiter /
 		currentChar = fullString[ charIndex++ ];
 
 		//Any unimportant characters ignored here.
-		TODO( "Add a param string of characters to ignore, check against != delimiter as above, then loop over that vs current char here to give utility free reign over ignoring." );
+		ROADMAP( "Add a param string of characters to ignore, check against != delimiter as above, then loop over that vs current char here to give utility free reign over ignoring." );
 		if ( ignoreReturns && currentChar == '\r' )
 			continue;
 		if ( ignoreTabs && currentChar == '\t' )

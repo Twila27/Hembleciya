@@ -89,7 +89,7 @@ public:
 		, m_isDepthTestEnabled( true )
 //		, m_isDirty( true ) 
 	{
-		TODO( "Implement RenderState::m_isDirty flag to save on # gl set calls which stall pipeline!" );
+		ROADMAP( "Implement RenderState::m_isDirty flag to save on # gl set calls which stall pipeline!" );
 	}
 
 	inline const RenderStateOptions* GetOptions() const { return &m_options; }

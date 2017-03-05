@@ -107,7 +107,7 @@ float Compute4dPerlinNoise( float posX, float posY, float posZ, float posT, floa
 // It is based on a regular simplex (2D triangle, 3D tetrahedron, 4-simplex/5-cell) grid, which
 //	is a bit more complicated (for me, anyway) to deconstruct, so I haven't written my own yet.
 //
-TODO( "Implement simplex noise in 2D, 3D, 4D (1D simplex == 1D Perlin?)" );
+ROADMAP( "Implement simplex noise in 2D, 3D, 4D (1D simplex == 1D Perlin?)" );
 
 //-----------------------------------------------------------------------------------------------
 inline unsigned int Get2dNoiseUint( int indexX, int indexY, unsigned int seed )
@@ -327,7 +327,7 @@ inline Vector2f GetPseudoRandomNoiseUnitVector2D( int xPosition, int yPosition )
 	int pseudoRandomPositiveInt = (bits * ((bits * bits * 15731) + 789221) + 1376312589) & 0x7fffffff;
 	float pseudoRandomFloatZeroToTwoPi = SCALE_FACTOR * (float) pseudoRandomPositiveInt;
 
-	TODO( "Read below comments on implementing GetNoise2D." );
+	ROADMAP( "Read below comments on implementing GetNoise2D." );
 	//  Rewrite this to use the randomized int to look up Vector2ffrom a cos/sin table; vectors don't need to be super-precise,
 	//	and we certainly don't want to pay full price for cos/sin if this is merely going to be used for, say, Perlin noise gradiants.
 	//	Note however that cos/sin are typically pretty fast on GPUs so this can probably stand as-is in shader code.

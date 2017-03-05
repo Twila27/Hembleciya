@@ -2,7 +2,6 @@
 #include "Engine/Renderer/TheRenderer.hpp"
 #include "Engine/Core/TheConsole.hpp"
 
-//SD4
 #include "Game/Biomes/BiomeBlueprint.hpp"
 #include "Game/Map.hpp"
 #include "Game/Cell.hpp"

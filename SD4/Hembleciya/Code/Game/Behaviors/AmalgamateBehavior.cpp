@@ -61,7 +61,7 @@ CooldownSeconds AmalgamateBehavior::Run()
 	static SoundID amalgamateSoundID = g_theAudio->CreateOrGetSound( "Data/Audio/Amalgamate.wav" );
 	g_theAudio->PlaySound( amalgamateSoundID, VOLUME_MULTIPLIER );
 
-	TODO( "In long run, want to make it spawn a multi-tile Amalgam NPCFactory product.\n \
+	ROADMAP( "In long run, want to make it spawn a multi-tile Amalgam NPCFactory product.\n \
 			Maybe make an NPC Amalgam subclass, push any # NPCs into it.\n \
 			Then they can be inserted into the turn order as a group?" );
 

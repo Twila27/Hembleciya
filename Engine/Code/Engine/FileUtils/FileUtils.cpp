@@ -85,7 +85,7 @@ bool SaveFloatsToTextFile( const std::string& filePath, const std::vector < floa
 //Credit SD4 Prof. Ken Harward
 std::vector< std::string > EnumerateFilesInDirectory( const std::string& relativeDirectoryPath, const std::string& filePattern )
 {
-	std::string					searchPathPattern = relativeDirectoryPath + "/" + filePattern;
+	std::string searchPathPattern = relativeDirectoryPath + "/" + filePattern;
 	std::vector< std::string > foundFiles;
 
 	int error = 0;
@@ -94,8 +94,8 @@ std::vector< std::string > EnumerateFilesInDirectory( const std::string& relativ
 	while ( searchHandle != -1 && !error )
 	{
 		std::string relativePathToFile = Stringf( "%s/%s", relativeDirectoryPath.c_str(), fileInfo.name );
-		bool		isDirectory = fileInfo.attrib & _A_SUBDIR ? true : false;
-		bool		isHidden = fileInfo.attrib & _A_HIDDEN ? true : false;
+		bool		isDirectory = ( fileInfo.attrib & _A_SUBDIR ) ? true : false;
+		bool		isHidden = ( fileInfo.attrib & _A_HIDDEN ) ? true : false;
 
 		if ( !isDirectory && !isHidden )
 			foundFiles.push_back( relativePathToFile );
@@ -109,10 +109,10 @@ std::vector< std::string > EnumerateFilesInDirectory( const std::string& relativ
 
 
 //--------------------------------------------------------------------------------------------------------------
-//Modded off EnumerateFilesInDirectory.
+//Forked off EnumerateFilesInDirectory by Benjamin D. Gibson.
 unsigned int CountFilesInDirectory( const std::string& relativeDirectoryPath, const std::string& filePattern )
 {
-	std::string					searchPathPattern = relativeDirectoryPath + "/" + filePattern;
+	std::string searchPathPattern = relativeDirectoryPath + "/" + filePattern;
 	unsigned int foundFiles = 0;
 
 	int error = 0;
@@ -121,8 +121,8 @@ unsigned int CountFilesInDirectory( const std::string& relativeDirectoryPath, co
 	while ( searchHandle != -1 && !error )
 	{
 		std::string relativePathToFile = Stringf( "%s/%s", relativeDirectoryPath.c_str(), fileInfo.name );
-		bool		isDirectory = fileInfo.attrib & _A_SUBDIR ? true : false;
-		bool		isHidden = fileInfo.attrib & _A_HIDDEN ? true : false;
+		bool		isDirectory = ( fileInfo.attrib & _A_SUBDIR ) ? true : false;
+		bool		isHidden = ( fileInfo.attrib & _A_HIDDEN ) ? true : false;
 
 		if ( !isDirectory && !isHidden )
 			++foundFiles;

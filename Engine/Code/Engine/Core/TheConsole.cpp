@@ -105,7 +105,7 @@ void TheConsole::Printf( const char* messageFormat, ... )
 	va_end( variableArgumentList );
 	messageLiteral[ MESSAGE_MAX_LENGTH - 1 ] = '\0'; // In case vsnprintf overran (doesn't auto-terminate)
 
-	TODO( "Make it push back a bool--probably turn into m_storedText into a container of structs--that flag whether up/down skips it." );
+	ROADMAP( "Make it push back a bool--probably turn into m_storedText into a container of structs--that flag whether up/down skips it." );
 	std::string finalMessage = std::to_string( ++numInvocation );
 	finalMessage += ": ";
 	finalMessage += messageLiteral;
@@ -122,7 +122,7 @@ void TheConsole::Render() //Recall up is +y.
 	if ( !m_isVisible )
 		return;
 
-	TODO( "Cleanup Macro via Enum on TheRenderer" );
+	ROADMAP( "Cleanup Macro via Enum on TheRenderer" );
 	//0x0302 - GL_SRC_ALPHA
 	//0x0303 - GL_ONE_MINUS_SRC_ALPHA
 	g_theRenderer->SetBlendFunc( 0x0302, 0x0303 );
@@ -136,7 +136,7 @@ void TheConsole::Render() //Recall up is +y.
 	fgColor.alphaOpacity = 172;
 
 	//Prompt box is what you type into, log box is what contains all the logged sentences.
-	TODO( " A way to render prompt box above the log box." );
+	ROADMAP( " A way to render prompt box above the log box." );
 
 	//Sizes for the command prompt are fixed to the active font.
 	float consoleX = static_cast<float> ( m_consoleX );

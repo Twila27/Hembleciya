@@ -489,7 +489,7 @@ public:
 						Vertex3D_PCT( particleStateTopRight, Rgba::WHITE, currentU + currentV ),
 						Vertex3D_PCT( particleStateTopLeft, Rgba::WHITE, nextU + currentV )
 					};
-					TODO( "Look into Anthony's TheRenderer:DrawVertexArray() to see how it handles drawing this with a texture!" );
+					ROADMAP( "Look into Anthony's TheRenderer:DrawVertexArray() to see how it handles drawing this with a texture!" );
 					g_theRenderer->DrawVertexArray_PCT( TheRenderer::AS_QUADS, quad, 4 ); //Can't use AABB, cloth quads deform from being axis-aligned.
 				}
 			}

@@ -219,7 +219,7 @@ Texture * BitmapFont::GetFontTexture( int pageNum ) const
 
 
 //--------------------------------------------------------------------------------------------------------------
-TODO( "Switch / for * as in SpriteSheet's approach." );
+ROADMAP( "Switch / for * as in SpriteSheet's approach." );
 AABB2f BitmapFont::GetTexCoordsForGlyph( int glyphUnicode ) const
 {
 	//Trying to return a mins and a maxs relative to the texture itself.

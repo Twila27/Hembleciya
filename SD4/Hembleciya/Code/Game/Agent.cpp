@@ -161,7 +161,7 @@ bool Agent::DoesNotHarmFaction( FactionID faction )
 void Agent::AdjustFactionStatus( Agent* instigator, FactionAction action )
 {
 	m_faction.AdjustFactionStatus( instigator, action );
-	//PrintStatusOnFaction( instigator->GetFactionID() );
+	//Can call PrintStatusOnFaction( instigator->GetFactionID() ); to debug values.
 }
 
 
@@ -261,7 +261,7 @@ void Agent::PopulateFromXMLNode( const XMLNode& instanceDataNode, Map* map )
 	m_targetEnemy = (Agent*)ReadXMLAttribute( instanceDataNode, "targetEnemyID", 0 ); //TRICK, fix in ResolveEntityPointer.
 	m_numMonstersKilled = ReadXMLAttribute( instanceDataNode, "numMonstersKilled", m_numMonstersKilled );
 	m_damageBonus = ReadXMLAttribute( instanceDataNode, "damageBonus", m_damageBonus );
-	TODO( "Turn duration and turn order, see A4 spec!" );
+	ROADMAP( "Turn duration and turn order, see A4 spec!" );
 	m_viewRadius = ReadXMLAttribute( instanceDataNode, "viewRadius", m_viewRadius );
 	m_traversalProperties = ReadXMLAttribute( instanceDataNode, "traversalProperties", m_traversalProperties );
 

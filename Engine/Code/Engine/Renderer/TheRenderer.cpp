@@ -90,7 +90,7 @@ unsigned int TheRenderer::GetOpenGLVertexGroupingRule( unsigned int engineVertex
 	case VertexGroupingRule::AS_LINE_LOOP: return GL_LINE_LOOP;
 	case VertexGroupingRule::AS_LINE_STRIP: return GL_LINE_STRIP;
 	case VertexGroupingRule::AS_TRIANGLES: return GL_TRIANGLES;
-	case VertexGroupingRule::AS_QUADS: return GL_QUADS; TODO("Remove GL_QUADS Dependency");
+	case VertexGroupingRule::AS_QUADS: return GL_QUADS; ROADMAP("Remove GL_QUADS Dependency");
 	default: return GL_POINTS;
 	}
 }
@@ -122,7 +122,7 @@ static bool s_isPilotingLight = false;
 bool TheRenderer::IsPilotingLight() { return s_isPilotingLight; }
 static unsigned int s_currentPilotedLightID = 0;
 //SD3 A5 (TBN) Console Command State Globals
-static int s_showTangents = 0; TODO( "Remove and use latter-AES render debug modes instead." );
+static int s_showTangents = 0; ROADMAP( "Remove and use latter-AES render debug modes instead." );
 static int s_showBitangents = 0;
 //SD3 A4 (Blinn-Phong) Console Command State Globals
 static int s_useFog = 1;
@@ -155,7 +155,7 @@ static void ToggleAxes( Command& )
 //--------------------------------------------------------------------------------------------------------------
 static void GenerateSurfacePatchByIndex( Command& args )
 {
-	TODO( "Write syntax parser to convert input string into math expression tree (RPN?)." );
+	ROADMAP( "Write syntax parser to convert input string into math expression tree (RPN?)." );
 
 	static const unsigned int NUM_EXPRESSIONS = 20;
 	static unsigned int numInvocation = 0;
@@ -2144,7 +2144,7 @@ void TheRenderer::UnbindTexture() //Actually just textured drawing with white 1x
 //--------------------------------------------------------------------------------------------------------------
 void TheRenderer::DrawAnthonyCloudySphere( Vector3f position, float radius, float numPoints, const Rgba& tint /*= Rgba()*/ )
 {
-	TODO( "Move the code from SD3's A3's Main_Win32 into here to draw correct UV sphere." );
+	ROADMAP( "Move the code from SD3's A3's Main_Win32 into here to draw correct UV sphere." );
 
 	//Credit Anthony Cloudy of Laundry Squadron.
 
@@ -2173,7 +2173,7 @@ void TheRenderer::DrawAnthonyCloudySphere( Vector3f position, float radius, floa
 //--------------------------------------------------------------------------------------------------------------
 void TheRenderer::DrawSphereGimbal( const int vertexGroupingRule, const Vector3f& centerPos, float radius, float numSides, const Rgba& tint /*= Rgba()*/, float lineThickness /*= 1.0f*/ )
 {
-	TODO( "Move the code from SD3's A3's Main_Win32 into here to draw correct UV sphere." );
+	ROADMAP( "Move the code from SD3's A3's Main_Win32 into here to draw correct UV sphere." );
 
 	UnbindTexture();
 
@@ -2397,7 +2397,7 @@ Mesh* TheRenderer::CreateAxisTintedCubeMesh3D_PCUTB( const AABB3f& bounds )
 //--------------------------------------------------------------------------------------------------------------
 Mesh* TheRenderer::CreateSphereMesh3D_PCUTB( const Vector3f& spherePos, float radiusSizeRho, float numCirclesVertical, float numCirclesHorizontal, const Rgba& tint /*= Rgba::WHITE*/ )
 {
-	TODO( "Change that sphere theta/phi rotation mixup issue." );
+	ROADMAP( "Change that sphere theta/phi rotation mixup issue." );
 
 	std::vector< Vertex3D_PCUTB > sphere;
 	std::vector< unsigned int > sphereIndices;
@@ -2757,7 +2757,7 @@ void TheRenderer::UpdateSceneMVP( const Camera3D* activeCam )
 
 																					 //model.ClearToTranslationMatrix( gInputTrans ); //Currently translates off because I need to rotate the [x,y,z]_Forseth basis to [x,z,y]_Squirrel basis.
 																					 //model.ClearToRotationMatrix_MyBasis( 0.f, 0.f, 0.f, COLUMN_MAJOR );
-	TODO( "Implement LookAt" );
+	ROADMAP( "Implement LookAt" );
 	//model.ClearToLookAtMatrix( Vector3f::ONE, camPos, Vector3f(0,1,0), COLUMN_MAJOR ); //0,1,0 == y or j-hat is world-up until we do a change of basis.
 
 	//-------------------VIEW-------------------//
@@ -2787,7 +2787,7 @@ void TheRenderer::UpdateSceneMVP( const Camera3D* activeCam )
 
 	//-------------------UNIFORMS-------------------//
 
-	TODO( "Use a uniform block over all shaders, for the MVP matrix uniforms." );
+	ROADMAP( "Use a uniform block over all shaders, for the MVP matrix uniforms." );
 
 	for ( auto& sp : *ShaderProgram::GetRegistry() )
 	{
@@ -2860,7 +2860,7 @@ Mesh* TheRenderer::CreateTriangleMesh3D( const VertexDefinition* vertexDefinitio
 //--------------------------------------------------------------------------------------------------------------
 static Material* MapToEngineMaterial( const std::string& materialNameID, const VertexDefinition* vdefn )
 {
-	TODO( "STD::MAP INSTEAD" );
+	ROADMAP( "STD::MAP INSTEAD" );
 	static unsigned int numInvocation = 0;
 
 //	if ( materialNameID == "Tutorial Box" )
@@ -3055,7 +3055,7 @@ void TheRenderer::AddFboEffect( const char* fboEffectShaderProgramName )
 //--------------------------------------------------------------------------------------------------------------
 void TheRenderer::Shutdown()
 {
-	TODO( "Delete remaining OpenGL Resources, including textures, samplers, meshes, materials, etc." );
+	ROADMAP( "Delete remaining OpenGL Resources, including textures, samplers, meshes, materials, etc." );
 	for ( auto& mr : *MeshRenderer::GetMeshRendererRegistry() ) delete mr.second;
 	for ( auto& mr : *MeshRenderer::GetFboEffectRendererRegistry() ) delete mr;
 	delete s_FBO;
@@ -3134,6 +3134,6 @@ void TheRenderer::SetupView2D()
 	g_theRenderer->EnableDepthTesting( false );
 	g_theRenderer->EnableBackfaceCulling( false );
 
-	TODO( "Set the default material's uProj := SetupOrtho(0,0,screenwidth,screenheight) when this is called." );
+	ROADMAP( "Set the default material's uProj := SetupOrtho(0,0,screenwidth,screenheight) when this is called." );
 	g_theRenderer->SetOrtho( Vector2f::ZERO, Vector2f( 1600.f, 900.f ) );
 }

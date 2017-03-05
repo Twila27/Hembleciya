@@ -224,7 +224,7 @@ bool CastleGenerator::BuildInhabitants( Map* map, int currentStepNumber )
 
 	bool didGenerateStep = false;
 
-	TODO( "Add an inhabitants= XML attribute to be processed by BiomeBlueprints!" );
+	ROADMAP( "Add an inhabitants= XML attribute to be processed by BiomeBlueprints!" );
 
 	didGenerateStep = true;
 	return didGenerateStep;

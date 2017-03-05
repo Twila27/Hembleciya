@@ -14,28 +14,14 @@ Item::Item( const Item& other, Map* map /*= nullptr*/, const XMLNode& instanceDa
 	, m_validSlots( other.m_validSlots )
 	, m_isHidden( other.m_isHidden )
 {
-	//This is from the template, not a game save with possibly changed XML.
-//	for ( ItemUse* use : other.m_itemUses )
-//	{
-//		m_itemUses.push_back( use->CreateClone() );
-//		m_itemUses.back()->SetAgent( this );
-//	}
-
-	if ( !instanceDataNode.isEmpty() ) //IsContentEmpty() would be true for <Wander />.
-	{
+	if ( !instanceDataNode.isEmpty() ) //XML library's IsContentEmpty() would be true for <Wander />, so I use IsEmpty().
 		PopulateFromXMLNode( instanceDataNode, map );
-// 		for ( ItemUse* use : m_itemUses )
-// 			use->SetAgent( this ); //Overwritten during Populate().
-	}
 }
 
 
 //--------------------------------------------------------------------------------------------------------------
 Item::~Item()
 {
-//	for ( ItemUse* iu : m_itemUses )
-//		if ( iu != nullptr )
-//			delete iu;
 }
 
 
@@ -93,8 +79,6 @@ void Item::PopulateFromXMLNode( const XMLNode& itemBlueprintNode, Map* map )
 
 	//Weapon damage is set by the factory from its interval object.
 	m_armorDefense = ReadXMLAttribute( itemBlueprintNode, "defense", m_armorDefense );
-
-//	PopulateItemUsesFromXMLNode( itemBlueprintNode.getChildNode( "ItemUses" ) );
 }
 
 
@@ -114,14 +98,6 @@ bool Item::AttachToMapAtPosition( Map* map, const MapPosition& position )
 void Item::ResolvePointersToEntities( std::map< EntityID, GameEntity* >& loadedEntities )
 {
 	UNREFERENCED( loadedEntities );
-
-	//Handle that trick performed down in PopulateFromXMLNode.
-//	if ( m_targetEnemy != nullptr )
-//	{
-//		std::map< EntityID, GameEntity* >::iterator targetEnemyIter = loadedEntities.find( (EntityID)m_targetEnemy );
-//		GUARANTEE_OR_DIE( targetEnemyIter != loadedEntities.end(), "Referenced targetEnemyID not found in loaded entities!" );
-//		m_targetEnemy = (Agent*)targetEnemyIter->second;
-//	}
 }
 
 
@@ -188,10 +164,6 @@ void Item::WriteToXMLNode( XMLNode& out_entityDataNode )
 
 	WriteXMLAttribute( itemNode, "damage", m_weaponDamage, 0 );
 	WriteXMLAttribute( itemNode, "defense", m_armorDefense, 0 );
-
-	//XMLNode itemUsesNode = itemNode.addChild( "ItemUses" );
-	//for ( ItemUse* use : m_itemUses )
-	//	use->WriteToXMLNode( itemUsesNode );
 }
 
 

@@ -41,7 +41,7 @@ public:
 	Vector2f GetScreenCenter() const;
 
 	static void QuitProgram( Command& );
-	static void QuitProgram() {	s_isQuitting = true; }
+	static void QuitProgram() { s_isQuitting = true; }
 	static bool IsQuitting() { return s_isQuitting; }
 	
 	void HandleInput();

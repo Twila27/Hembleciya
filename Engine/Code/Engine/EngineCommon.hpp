@@ -18,18 +18,19 @@
 // FIXMEs / TODOs / NOTE macros
 // http://flipcode.com/archives/FIXME_TODO_Notes_As_Warnings_In_Compiler_Output.shtml
 // Fixes by Chris Forseth
+// TODOS changed to ROADMAPs by Benjamin D. Gibson
 //---------------------------------------------------------------------------------------------
 
-//#define SHOW_TODO
-#ifdef SHOW_TODO
+//#define SHOW_ROADMAP
+#ifdef SHOW_ROADMAP
 
-#define TODO( x )  NOTE( __FILE__LINE__"\n"           \
+#define ROADMAP( x )  NOTE( __FILE__LINE__"\n"           \
 		" ------------------------------------------------\n" \
-		"|  TODO :   " ##x "\n" \
+		"|  ROADMAP :   " ##x "\n" \
 		" -------------------------------------------------\n" )
-#define todo( x )  NOTE( __FILE__LINE__" TODO :   " #x "\n" ) 
+#define ROADMAP( x )  NOTE( __FILE__LINE__" TODO :   " #x "\n" ) 
 #else
-#define TODO( x ) 
+#define ROADMAP( x ) 
 #endif
 
 #define PRAGMA(p)  __pragma( p )

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ItemBlueprints> 
+	These are Forgeries, named Armors for clarity, they make hits negligible from their faction type, but more damage results from those hostile to this faction.
+	Note however that multiple of one Guise can worn on separate equipment slots.
+	Perhaps getting all of 1 faction could cause faster heal in dreams, or wider dreams, if the dream matches the faction of the set.
+	<ItemBlueprint type="armor" slot="head,chest,legs" defense="4" name="Guise of a Nightmare" />
+	<ItemBlueprint type="armor" slot="head,chest,legs" defense="1" name="Guise of a Daydream" />
+	<ItemBlueprint type="armor" slot="head,chest,legs" defense="2" name="Guise of a Lucid Dream" />
+	<ItemBlueprint type="armor" slot="head,chest,legs" defense="3" name="Guise of a Recurring Dream" />
+	<ItemBlueprint type="armor" slot="head,chest,legs" defense="2" name="Guise of a Prediction" />
+	<ItemBlueprint type="armor" slot="head,chest,legs" defense="4" name="Guise of a Revelation" />
+	<ItemBlueprint type="armor" slot="head,chest,legs" defense="1" name="Guise of a Mundane Dream" />
+	<ItemBlueprint type="armor" slot="head,chest,legs" defense="3" name="Guise of a Shadowself Dream" />
+	<ItemBlueprint type="armor" slot="head,chest,legs" defense="2" name="Guise of a Sequential Dream" />
+	<ItemBlueprint type="armor" slot="head,chest,legs" defense="2" name="Guise of a Shared Dream" />
+</ItemBlueprints>

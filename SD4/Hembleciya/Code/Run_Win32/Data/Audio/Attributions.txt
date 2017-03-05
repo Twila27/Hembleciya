@@ -1,0 +1,6 @@
+Amalgamate.wav -- EnchantJS Starter Project resources
+dead_music.wav, EnemyAttack.wav, EnemyDeath.wav, game_over.mod -- ReCline Engine game0/ resources
+DreamBroken.wav, Hurt#.wav, PlayerHurt#.wav, PlayerAttack.wav, PlayerWalk#.wav -- Guildhall SFX Library
+DreamOpened.wav -- above DreamBroken.wav manually flipped in Audacity
+MenuAccept.wav, MenuDecline.wav -- Cocos2D-X Starter Project resources
+Other resources: SoundBible.com, Guildhall SFX Library, and sound resources from my personal ReCline Engine built in undergrad.

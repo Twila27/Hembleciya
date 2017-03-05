@@ -93,7 +93,7 @@ DreamBehavior::~DreamBehavior()
 		{
 			m_isDreaming = false;
 			OverwriteMap(); //Agent has died, restore world.
-			TODO( "Drop Corresponding Item @ m_agent's Pos, Read ItemFactory Name From XML!" );
+			ROADMAP( "Drop Corresponding Item @ m_agent's Pos, Read ItemFactory Name From XML!" );
 		}
 	}
 	if ( m_dreamMap != nullptr )
@@ -125,15 +125,8 @@ UtilityValue DreamBehavior::CalcUtility()
 		return NO_UTILITY_VALUE; //Don't spawn player in on a wall.
 
 	//By this point we know we have the player in range and can bring the dream map around them without getting them stuck.
-	//	if ( m_agent->GetHealth() > ( m_agent->GetMaxHealth() * m_maxHealthFractionNeededToActivate ) )
-	//		return 0.f; //Agent still too healthy. Letting it take damage first makes it slightly likelier the player's in close.
-
-	//First, at least for now--if we're starting a swap--test to be sure a dream doesn't already exist there.
-	
-	//-----------------------------------------------------------------------------
-	//Check for other dreams already happening around the NPC.
-	//If one exists, don't create a new one. 
-	//(Breaks the swapping/saving systems to have 2+ dreams going at once).
+	//So, check for other dreams already happening around the NPC. If one exists, don't create a new one. 
+	//(Breaks the swapping/saving systems to have 2+ dreams going at once!).
 
 	Map* map = m_agent->GetMap();
 	Vector2i spawnInDreamMap = GetSpawnInDreamMap();
@@ -257,7 +250,7 @@ bool DreamBehavior::OverwriteMap()
 //--------------------------------------------------------------------------------------------------------------
 Vector2i DreamBehavior::GetSpawnInDreamMap() const
 {
-	TODO( "Substitute this for an actual given (S)tart tile." );
+	ROADMAP( "Substitute this for an actual given (S)tart tile." );
 		//At that point, just return that location instead of this temp one.
 	
 	return m_dreamMap->GetDimensions() / 2; 

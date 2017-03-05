@@ -336,7 +336,7 @@ static bool GetUVForMeshAndVertex( Vector2f* out_uv, FbxMesh* mesh, int polyInde
 //--------------------------------------------------------------------------------------------------------------
 static bool HasSkinWeights( const FbxMesh* mesh )
 {
-	TODO( " Morph Targets! " );
+	ROADMAP( " Morph Targets! " );
 	//To support morph target animation, you'll need to also import all submeshes and get the curve info off the deformer for how it's evaluating/blending those submeshes together.
 	return mesh->GetDeformerCount( FbxDeformer::eSkin ) > 0;
 }
@@ -1172,7 +1172,7 @@ void FBXLoad( Command& args )
 			g_lastLoadedMeshBuilder = nullptr;
 		}
 		g_lastLoadedMeshBuilder = CombineMeshBuildersInScene( importedScene );
-		TODO( "Double-check the other combined builders are being cleaned up." );
+		ROADMAP( "Double-check the other combined builders are being cleaned up." );
 
 		//--------------------------------------------------------------------------------------------------------------
 // 		if ( g_lastLoadedSkeleton != nullptr ) 

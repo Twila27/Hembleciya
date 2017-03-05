@@ -44,58 +44,44 @@ LRESULT CALLBACK WindowsMessageHandlingProcedure( HWND windowHandle, UINT wmMess
 {
 	unsigned char asKey = (unsigned char)wParam;
 
-	//Just disabling console input in this game for now.
-// 	if ( g_theConsole != nullptr && g_theConsole->IsVisible() && GetGameState() != GAME_STATE_PLAYING )
-// 	{
-// 		if ( wmMessageCode == WM_CHAR )
-// 			g_theConsole->UpdatePromptForChar( asKey );
-// 		if ( wmMessageCode == WM_KEYDOWN )
-// 			g_theConsole->UpdatePromptForKeydown( asKey );
-// 	}
-//	else
+	//Console event handling logic.
+	switch ( wmMessageCode )
 	{
-		switch ( wmMessageCode )
-		{
-		case WM_CLOSE:
-		case WM_DESTROY:
-		case WM_QUIT:
-			return 0;
+	case WM_CLOSE:
+	case WM_DESTROY:
+	case WM_QUIT:
+		return 0;
 
-		case WM_KEYDOWN:
-			g_theInput->SetKeyDownStatus( asKey, true );
-			if ( asKey == VK_ESCAPE )
-			{
-				//g_theApp->QuitProgram();
-				//return 0;
-			}
-			break;
+	case WM_KEYDOWN:
+		g_theInput->SetKeyDownStatus( asKey, true );
+		break;
 
-		case WM_KEYUP:
-			g_theInput->SetKeyDownStatus( asKey, false );
-			break;
+	case WM_KEYUP:
+		g_theInput->SetKeyDownStatus( asKey, false );
+		break;
 
-		case WM_LBUTTONDOWN:
-			g_theInput->SetMouseDownStatus( VK_LBUTTON, true );
-			break;
+	case WM_LBUTTONDOWN:
+		g_theInput->SetMouseDownStatus( VK_LBUTTON, true );
+		break;
 
 
-		case WM_LBUTTONUP:
-			g_theInput->SetMouseDownStatus( VK_LBUTTON, false );
-			break;
+	case WM_LBUTTONUP:
+		g_theInput->SetMouseDownStatus( VK_LBUTTON, false );
+		break;
 
 
-		case WM_RBUTTONDOWN:
-			g_theInput->SetMouseDownStatus( VK_RBUTTON, true );
-			break;
+	case WM_RBUTTONDOWN:
+		g_theInput->SetMouseDownStatus( VK_RBUTTON, true );
+		break;
 
 
-		case WM_RBUTTONUP:
-			g_theInput->SetMouseDownStatus( VK_RBUTTON, false );
-			break;
-		}
+	case WM_RBUTTONUP:
+		g_theInput->SetMouseDownStatus( VK_RBUTTON, false );
+		break;
 	}
 
-	switch ( wmMessageCode ) //Some events we still want to run even if console's up.
+	//Non-console event handling logic.
+	switch ( wmMessageCode )
 	{
 	case WM_SETFOCUS:
 		if ( g_theInput != nullptr )

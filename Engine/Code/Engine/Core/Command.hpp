@@ -25,7 +25,7 @@ public:
 	bool GetNextInt( int* out, int defaultValue );
 	bool GetNextChar( char* out, char defaultValue );
 	//etc... every GetNext follows the skeleton in GetNextColor.
-	TODO( "bool GetNextInt( int* out, const char* defaultValue ) const;" );
+	ROADMAP( "bool GetNextInt( int* out, const char* defaultValue ) const;" );
 	bool ParseColor( Rgba* out, const char* arg ) const;
 	bool ParseFloat( float* out, const char* arg ) const;
 	bool ParseInt( int* out, const char* arg ) const;

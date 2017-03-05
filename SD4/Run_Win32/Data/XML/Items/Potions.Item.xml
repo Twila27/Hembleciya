@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ItemBlueprints>
+	To be replaced by the idea of "oneirogen" drops from enemies that allow you to activate their dreams for yourself at the cost of 1HP. Still working on benefits.
+	<ItemBlueprint type="potion" name="Potion of a Signal Dream" /> View radius increase.
+	<ItemBlueprint type="potion" name="Potion of a Wellness Dream" /> Health increase.
+	<ItemBlueprint type="potion" name="Potion of a Nightmare" /> Damage buff, darkens your glyph color.
+</ItemBlueprints>

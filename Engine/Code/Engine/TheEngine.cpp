@@ -33,7 +33,7 @@ static void RegisterConsoleCommands()
 	g_theConsole->RegisterCommand( "SkeletonSaveLastSkeletonMade", SkeletonSaveLastSkeletonMade );
 	g_theConsole->RegisterCommand( "SkeletonLoadFromFile", SkeletonLoadFromFile );
 	g_theConsole->RegisterCommand( "DebugRenderClearCommands", DebugRenderClearCommands );
-	TODO( "Make a separate 'add' console command for each of the DebugRenderCommands!" );
+	ROADMAP( "Make a separate 'add' console command for each of the DebugRenderCommands!" );
 
 	//AES A5
 	g_theConsole->RegisterCommand( "AnimationLoadFromFile", AnimationLoadFromFile );
@@ -104,7 +104,7 @@ void TheEngine::Update( float deltaSeconds )
 	g_theRenderer->Update( deltaSeconds, g_theGame->GetActiveCamera() );
 		//Update uniforms for shader timers, scene MVP, and lights.
 
-	TODO( "Explore passing in 0 to freeze, or other values to rewind, slow, etc." );
+	ROADMAP( "Explore passing in 0 to freeze, or other values to rewind, slow, etc." );
 	g_theGame->Update( deltaSeconds );
 
 	UpdateDebugCommands( deltaSeconds );

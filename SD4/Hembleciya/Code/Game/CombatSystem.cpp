@@ -110,7 +110,6 @@ STATIC void CombatSystem::PerformAttack( AttackData& attackData )
 
 	//Handle outcome.
 	ReportAttackResult( attackData );
-	//attackData.instigator->AdjustFactionStatus(); //Do we do one for the instigator?
 	attackData.target->AdjustFactionStatus( attackData.instigator, FACTION_ACTION_ATTACKS );
 
 	if ( !attackData.target->IsAlive() ) //Note death sound/message displayed in TheGame::DestroyDeadGameplayEntities().

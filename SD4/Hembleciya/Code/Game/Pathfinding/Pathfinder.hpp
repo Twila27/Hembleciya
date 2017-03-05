@@ -43,7 +43,7 @@ private:
 	bool CheckAgainstOpenList( PathNode* currentNeighbor );
 	void RecursivelyBuildPathBackToStartFromNode( PathNode* goalNode );
 
-	Map* m_map;	TODO( "Create Proxy!" );
+	Map* m_map;	ROADMAP( "Create Proxy!" );
 	Vector2i m_goal;
 	std::vector< PathNode* > m_finalPathResult;
 	std::map< Vector2i, PathNode* > m_closedList; //Visited. Superset of the final path.

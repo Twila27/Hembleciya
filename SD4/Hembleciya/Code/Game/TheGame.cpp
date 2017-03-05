@@ -4,8 +4,8 @@
 #include "Engine/Core/Command.hpp"
 #include "Engine/FileUtils/FileUtils.hpp"
 #include "Engine/Core/TheConsole.hpp"
+#include "Engine/Math/Camera3D.hpp"
 
-//SD4
 #include "Game/GameEntity.hpp"
 #include "Game/Player.hpp"
 #include "Game/Map.hpp"
@@ -21,8 +21,6 @@
 #include "Engine/Audio/TheAudio.hpp"
 #include "Game/FactionSystem.hpp"
 
-//Engine Overhaul
-#include "Engine/Math/Camera3D.hpp"
 
 
 //--------------------------------------------------------------------------------------------------------------
@@ -297,7 +295,7 @@ bool TheGame::UpdateMapGenerating( float /*deltaSeconds*/ )
 	}
 	else g_showFullMap = true;
 
-	TODO( "Compute cell dimensions and screen position once, store on cell." );
+	ROADMAP( "Compute cell dimensions and screen position once, store on cell." );
 
 	if ( g_theInput->WasKeyPressedOnce( VK_SPACE ) || g_theInput->WasButtonPressedOnce( ControllerButtons::A_BUTTON, Controllers::CONTROLLER_ONE ) )
 	{
@@ -795,18 +793,14 @@ bool TheGame::UpdateShutdown( float /*deltaSeconds*/ )
 //--------------------------------------------------------------------------------------------------------------
 bool TheGame::Update( float deltaSeconds )
 {
-	if ( g_theInput->WasKeyPressedOnce( 'X' ) && g_backgroundMusic != nullptr )
+	if ( g_theInput->WasKeyPressedOnce( KEY_TO_MUTE_MUSIC ) && g_backgroundMusic != nullptr )
 		g_backgroundMusic->stop();
 
-	if ( g_theInput->WasKeyPressedOnce( 'M' ) )
+	if ( g_theInput->WasKeyPressedOnce( KEY_TO_TOGGLE_SHOW_MAP ) )
 		g_theConsole->RunCommand( "ShowMap" );
 
-	//Debug GameCommon flag setting. Toggling back and forth will cause some chunks to become and stay dirty until updated (usually by player ray-cast dirtying VAO), hence it's just for debug.
-	if ( g_theInput->WasKeyPressedOnce( KEY_TO_TOGGLE_DEBUG_INFO ) ) g_inDebugMode = !g_inDebugMode;
-
-
 	//-----------------------------------------------------------------------------
-	TODO( "MOVE INSIDE THE ENGINE SINGLETON'S UPDATE, CALLED FROM MAIN_WIN32" );
+	ROADMAP( "MOVE INSIDE THE ENGINE SINGLETON'S UPDATE, CALLED FROM MAIN_WIN32" );
 	//-----------------------------------------------------------------------------
 	UpdateDebugCommands( deltaSeconds );
 

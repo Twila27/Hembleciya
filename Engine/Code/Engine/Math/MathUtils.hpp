@@ -372,8 +372,8 @@ inline float SmoothStop( float inputZeroToOne )
 //-----------------------------------------------------------------------------------------------
 inline int GetRandomIntInRange( int minValueInclusive, int maxValueInclusive )
 {
-	TODO( "Use a faster, better random number generator." );
-	TODO( "Use more bits for higher-range numbers." );
+	ROADMAP( "Use a faster, better random number generator." );
+	ROADMAP( "Use more bits for higher-range numbers." );
 	return minValueInclusive + rand() % ( 1 + maxValueInclusive - minValueInclusive );
 }
 
@@ -381,8 +381,8 @@ inline int GetRandomIntInRange( int minValueInclusive, int maxValueInclusive )
 //-----------------------------------------------------------------------------------------------
 inline int GetRandomIntLessThan( int maxValueNotInclusive )
 {
-	TODO( "Use a faster, better random number generator." );
-	TODO( "Use more bits for higher-range numbers." );
+	ROADMAP( "Use a faster, better random number generator." );
+	ROADMAP( "Use more bits for higher-range numbers." );
 	return rand() % maxValueNotInclusive;
 }
 
@@ -390,7 +390,7 @@ inline int GetRandomIntLessThan( int maxValueNotInclusive )
 //-----------------------------------------------------------------------------------------------
 inline float GetRandomFloatZeroTo( float maximumInclusive )
 {
-	TODO( "Use a faster, better random number generator." );
+	ROADMAP( "Use a faster, better random number generator." );
 	const float oneOverRandMax = 1.f / static_cast< float >( RAND_MAX / maximumInclusive );
 	return static_cast< float >( rand() ) * oneOverRandMax;
 }
@@ -399,7 +399,7 @@ inline float GetRandomFloatZeroTo( float maximumInclusive )
 //-----------------------------------------------------------------------------------------------
 template <typename T> inline T GetRandomElementInRange( T minInclusive, T maxInclusive )
 {
-	TODO( "Use a faster, better random number generator." );
+	ROADMAP( "Use a faster, better random number generator." );
 	const float randomZeroToOne = GetRandomFloatZeroTo( 1.f );
 	return minInclusive + static_cast<T>( ( maxInclusive - minInclusive ) * randomZeroToOne );
 }
@@ -408,7 +408,7 @@ template <typename T> inline T GetRandomElementInRange( T minInclusive, T maxInc
 //-----------------------------------------------------------------------------------------------
 inline float GetRandomFloatInRange( float minimumInclusive, float maximumInclusive )
 {
-	TODO( "Use a faster, better random number generator." );
+	ROADMAP( "Use a faster, better random number generator." );
 	const float randomZeroToOne = GetRandomFloatZeroTo( 1.f );
 	return minimumInclusive + ( randomZeroToOne * ( maximumInclusive - minimumInclusive ) );
 }
@@ -501,7 +501,7 @@ inline T Slerp( const T& start, const T& end, float t )
 
 
 //--------------------------------------------------------------------------------------------------------------
-//TODO( "Move into MathUtils, just keep Vector3<T>" );
+//ROADMAP( "Move into MathUtils, just keep Vector3<T>" );
 template <typename T>
 inline T SlerpUnit( const T& start, const T& end, float t )
 {

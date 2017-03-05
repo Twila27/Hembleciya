@@ -16,8 +16,6 @@ public:
 
 	//Only really seen by this subclass, provided to its registration object in the source file.
 	static Generator* CreateGenerator( const std::string& name ) { return new KruskalDartboardGenerator( name ); }
-	//static BiomeGenerationProcess* CreateBiomeGenerationProcess( const XMLNode& generationProcessNode ) { return new KruskalDartboardGenerationProcess( generationProcessNode ); }
-		//Implement if needed for only-this-subclass-relevant-custom-XML-attributes, like the river's surface="lava".
 
 	//Standard interface for polymorphic use in the game.
 	//virtual Map* CreateMapAndInitializeCells( const Vector2if& size, const std::string& mapName );

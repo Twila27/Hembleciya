@@ -44,7 +44,7 @@ public:
 	//Keyboard.
 	void SetKeyDownStatus( unsigned char asKey, bool isNowDown ); //Used by WinMain key callback.
 	void SetMouseDownStatus( int windowsButtonEvent, bool isNowDown );
-	TODO( "Create a variant of below and similar methods to take an array of inputs." );
+	ROADMAP( "Create a variant of below and similar methods to take an array of inputs." );
 	bool IsKeyDown( unsigned char keyID ) const;
 	bool WasKeyJustPressed( unsigned char keyID ) const;
 	bool WasKeyPressedOnce( unsigned char keyID ) const;

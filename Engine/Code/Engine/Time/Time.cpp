@@ -66,7 +66,7 @@ float CalcDeltaSeconds()
 
 	while ( deltaSeconds < SECONDS_PER_FRAME )
 	{
-		TODO( "Replace with more sophisticated framerate timer system." );
+		ROADMAP( "Replace with more sophisticated framerate timer system." );
 		Sleep( 0 );
 		//Further apart because s_timeLastFrameBegan isn't updated:
 		deltaSeconds = static_cast<float>( GetCurrentTimeSeconds() - s_timeLastFrameBegan );

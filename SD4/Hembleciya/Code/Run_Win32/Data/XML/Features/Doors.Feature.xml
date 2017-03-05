@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FeatureBlueprints>
+	<FeatureBlueprint name="Wooden Door" type="Door" zeroGlyph="+" oneGlyph="-"
+		isLineOfSightBlockedWhenActive="0" isLineOfSightBlockedWhenInactive="1" isMovementBlockedWhenActive="0" isMovementBlockedWhenInactive="1" />
+	<FeatureBlueprint name="Portcullis" type="Door" zeroGlyph="+" oneGlyph="-" color="0,0,0"
+		isLineOfSightBlockedWhenActive="0" isLineOfSightBlockedWhenInactive="0" isMovementBlockedWhenActive="0" isMovementBlockedWhenInactive="1" />
+	<FeatureBlueprint name="Decaying Door" type="Door" zeroGlyph="+" oneGlyph="-" color="64,64,64,128"
+		isLineOfSightBlockedWhenActive="0" isLineOfSightBlockedWhenInactive="1" isMovementBlockedWhenActive="0" isMovementBlockedWhenInactive="1" />
+</FeatureBlueprints>

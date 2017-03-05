@@ -8,7 +8,7 @@
 // Includes
 //--------------------------------------------------------------------------------------------------------------
 #include "Engine/EngineCommon.hpp"
-	TODO( "Create a GameContext/EngineContext class replacing GameCommon/EngineCommon." );
+	ROADMAP( "Create a GameContext/EngineContext class replacing GameCommon/EngineCommon." );
 #include "Engine/EngineCommon.hpp"
 #include "Engine/Renderer/DebugRenderCommand.hpp"
 #include "Engine/Math/Vector2.hpp"
@@ -48,7 +48,7 @@ class Item;
 //--------------------------------------------------------------------------------------------------------------
 // Operating System
 //--------------------------------------------------------------------------------------------------------------
-static const char* g_appName = "Save/Load, Items, Features, Terrain (SD4 A04 Final) by Benjamin Gibson";
+static const char* g_appName = "Save/Load, Items, Features, Terrain (Hembleciya Final) by Benjamin D. Gibson";
 
 
 //--------------------------------------------------------------------------------------------------------------
@@ -68,6 +68,8 @@ static const int KEY_TO_DROP_FIRST_UNEQUIPPED_ITEM = VK_OEM_PERIOD;
 static const char KEY_TO_USE_POTION = 'Q';
 static const char KEY_TO_TOGGLE_FEATURE = 'A';
 static const char KEY_TO_REST = 'R';
+static const char KEY_TO_MUTE_MUSIC = 'X';
+static const char KEY_TO_TOGGLE_SHOW_MAP = 'M';
 
 
 //-----------------------------------------------------------------------------

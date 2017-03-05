@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<BiomeBlueprint name="Sandbars, Oceans, and Lava Pits (Terrain Types)" size="64,32"> <!-- Pulls the name from the * of *.Biome.xml if none supplied here to overwrite it. -->
+	<!-- generator= and steps= correspond to member variables of the base [Environment/Biome]GenerationProcess class. -->
+	<!-- Any other extra pairs need to be parsed into member fields of Generator SUBclass instances' lightweight corresponding GenerationProcess SUBclasses. -->
+	<GenerationProcessData generator="GameOfLifeCaves" steps="5"/>
+	<GenerationProcessData generator="HarwardCaves" steps="5"/>	
+	<GenerationProcessData generator="Sandbar" steps="200" />
+
+</BiomeBlueprint>

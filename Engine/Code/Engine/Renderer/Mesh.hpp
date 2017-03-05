@@ -70,8 +70,8 @@ public:
 
 private:
 
-	TODO( "Abstract Vertex class" );
-	TODO( "Make Mesh adhere to registry pattern keyed on name string like Material or ShaderProgram." );
+	ROADMAP( "Abstract Vertex class" );
+	ROADMAP( "Make Mesh adhere to registry pattern keyed on name string like Material or ShaderProgram." );
 	VertexBuffer* m_vertices;
 	IndexBuffer* m_indices;
 

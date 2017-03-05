@@ -93,9 +93,4 @@ private:
 	int m_armorDefense;
 
 	bool m_isHidden; //To override by the * of a cell if multiple items are on it.
-
-	TODO( "Replace above properties via ItemUse in long-term!" );
-	//void PopulateItemUsesFromXMLNode( const XMLNode& itemUsesNode );
-	//std::vector< ItemUse* >& GetItemUses() { return m_itemUses; }
-	//std::vector< ItemUse* > m_itemUses;
 };

@@ -320,7 +320,7 @@ bool MeshBuilder::AppendMeshBuilderIfMasksMatch( const MeshBuilder& other )
 		}
 	}
 
-	TODO( "Have 2 draw instructions for drawing triangles become 1 instruction with twice the reach." );
+	ROADMAP( "Have 2 draw instructions for drawing triangles become 1 instruction with twice the reach." );
 	return true;
 }
 

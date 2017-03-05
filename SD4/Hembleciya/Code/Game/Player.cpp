@@ -28,7 +28,7 @@ bool Player::ProcessInput()
 	bool pressedToggleFeature = g_theInput->WasKeyPressedOnce( KEY_TO_TOGGLE_FEATURE );
 	bool pressedRest = g_theInput->WasKeyPressedOnce( KEY_TO_REST );
 
-	TODO( "Use bool[] instead!" );
+	ROADMAP( "Use bool[] instead!" );
 	if ( PredictNextAction( pressedLeft, pressedRight, pressedUp, pressedDown, 
 							pressedUsePotion, pressedToggleFeature, pressedRest ) )
 		didFindInput = true;
